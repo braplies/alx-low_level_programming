@@ -1,12 +1,16 @@
 #include <stdio.h>
-/*
- * main - This program outputs a string without using fwrite.
- *
- * Return: Always 0 (Success)
+#include <string.h>
+#include <unistd.h>
+/**
+ * main - main block
+ * Return: 1
  */
-int main (void)
+int main(void)
 {
-	char strl[]1 = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	int s = strlen("and that piece of art is useful - Dora Korpar, 2015-10-19\n");
 
-	fwrite(strl, 1,59,stderr);
-	return(1);
+	write(2,
+	      "and that piece of art is useful - Dora Korpar, 2015-10-19\n",
+	      s);
+	return (1);
+}
