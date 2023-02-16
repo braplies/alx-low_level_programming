@@ -9,7 +9,7 @@ int main(void)
 {
 	int s = strlen("and that piece of art is useful - Dora Korpar, 2015-10-19\n");
 
-	fwrite(s,
+	write(s,
 	      "2,msg,
 	      59);
 	return (1);
